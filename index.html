@@ -1,34 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Weather API</title>
+    <title>Weather Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </link>
+    <!-- css stylesheet -->
+    <link href=style.css rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-
-
 <body>
-    
+    <!-- Jumbotron -->
     <div class="jumbotron jumbotron-fluid">
-        <div class="container text-center">
+        <div class="title-container">
+            <h1 class="display-4">Weather Dashboard</h1>
+        </div>
+    </div>
+    <!-- search for a city-->
 
+    <section id="main-container" class="container">
 
-            <h1>Weather Dashboard</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <h5>Search for a City:</h5>
+                <div class="col">
+                    <input id="city-input" type="text" class="form-control" placeholder="City Name">
+                    <button id="search-button" type="submit" class="btn btn-primary mb-2">Search</button>
+                    <div id="buttons" class="button-group">
+                </div>
+            </div>
 
+            <div class="col-sm-8">
+                <div class="top-card" style="width: 20rem;">
+                    <div id="main-card" class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="card-subtitle mb-2">Card subtitle</h6>
+                        <img class="icons">
+                        <p class="card-conditions"></p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.
+                        </p>
+                        <p class="card-wind">Wind Speed: </p>
+                        <p class="card-uv">UV Index: <span id="uv-text"></span></p>
 
+                    </div>
+                </div>
+            </div>
         </div>
 
-    </div>
+    </section>
+
+    <section id="forecast" class="row">
+
+
+        <!-- forecast cards go here -->
+
+    </section>
 
 
 
-    
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./scrpt.js"></script>
+    <!-- moment -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <!-- javascript -->
+    <script type="text/javascript" src="javascript.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
 </body>
+
 
 </html>
